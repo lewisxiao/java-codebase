@@ -1,4 +1,4 @@
-package com.lewisxiao.rocketmq.demo.producer.order;
+package com.lewisxiao.codebase.rocketmq.producer.order;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.MessageQueueSelector;

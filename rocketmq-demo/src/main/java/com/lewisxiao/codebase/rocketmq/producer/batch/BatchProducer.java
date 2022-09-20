@@ -1,4 +1,4 @@
-package com.lewisxiao.rocketmq.demo.producer.batch;
+package com.lewisxiao.codebase.rocketmq.producer.batch;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.Message;

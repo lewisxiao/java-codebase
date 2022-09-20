@@ -1,4 +1,4 @@
-package com.lewisxiao.rocketmq.demo.producer.delay;
+package com.lewisxiao.codebase.rocketmq.producer.delay;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.Message;

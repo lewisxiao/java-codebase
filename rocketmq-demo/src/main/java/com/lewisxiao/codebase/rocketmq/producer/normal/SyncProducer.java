@@ -1,4 +1,4 @@
-package com.lewisxiao.rocketmq.demo.producer.normal;
+package com.lewisxiao.codebase.rocketmq.producer.normal;
 
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;

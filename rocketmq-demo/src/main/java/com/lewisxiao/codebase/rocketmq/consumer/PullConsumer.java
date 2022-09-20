@@ -1,4 +1,4 @@
-package com.lewisxiao.rocketmq.demo.consumer;
+package com.lewisxiao.codebase.rocketmq.consumer;
 
 import org.apache.rocketmq.client.consumer.*;
 import org.apache.rocketmq.common.message.MessageExt;
