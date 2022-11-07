@@ -1,11 +1,8 @@
 package com.lewisxiao.codebase.rocketmq.producer.normal;
 
-import org.apache.rocketmq.client.exception.MQBrokerException;
-import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
-import org.apache.rocketmq.remoting.exception.RemotingException;
 
 import java.nio.charset.StandardCharsets;
 
@@ -27,20 +24,18 @@ public class SyncProducer {
 
         // 设置NameServer地址
         producer.setNamesrvAddr("localhost:9876");
-        producer.setSendMsgTimeout(30 * 60 * 1000);
 
         // 启动producer
         producer.start();
 
         try {
-            for (int i = 0; i < 100; i++) {
-                Message message = new Message("syncSmsTopic", "smsTagA", ("你好 RocketMQ" + i).getBytes(StandardCharsets.UTF_8));
+            for (int i = 0; i < 1; i++) {
+                Message message = new Message("syncTopic", "smsTagA", ("你好 RocketMQ" + i).getBytes(StandardCharsets.UTF_8));
                 message.putUserProperty("subTag1", "subTag1");
                 SendResult sendResult = producer.send(message);
                 System.out.printf("%s%n", sendResult);
             }
         } finally {
-
             // 使用完毕后，关闭producer
             producer.shutdown();
         }
